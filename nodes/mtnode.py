@@ -90,9 +90,9 @@ class XSensDriver(object):
         self.updater = Updater()
         self.updater.setHardwareID(str(self.mt.GetDeviceID()))
 
-        self.updater.add("Self Test", self.diagnostic_self_test)
-        self.updater.add("XKF", self.diagnostic_xkf)
-        self.updater.add("GPS Fix", self.diagnostic_gps)
+        #self.updater.add("Self Test", self.diagnostic_self_test)
+        #self.updater.add("XKF", self.diagnostic_xkf)
+        #self.updater.add("GPS Fix", self.diagnostic_gps)
         self.updater.add("Device Info", self.diagnostic_device)
 
         self.imu_freq = TopicDiagnostic("imu/data", self.updater,
